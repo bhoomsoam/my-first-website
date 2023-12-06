@@ -1,23 +1,109 @@
+/*
+Colors used:
+Primary Color (Black): ##000000, 0,0,0,1;
+Secondary Color (Green): #4D4D4D, 77,77,77,1;
+BG Primary color (Light Grey): #ECECEC, 236,236,236,1;
+BG Secondary color (White): #FFFFFF, 255,255,255,1;
+Accent color (Neon Gree): #CFFF0F, 207,255,15,1;
+*/
+
+body {
+    background-color: rgba(255, 255, 255, 1);
+    font-family: 'Nunito+Sans', sans-serif;
+    font-size: 20px; /* Sets the font size to 16px */
+    font-weight: 400; /* Sets the font weight to 300 */
+    line-height: 1.5; /* Sets the line-height to 1.6 * the font-size */
+    color: rgba(77, 77, 77, 1);
+}
+
+img {
+    width: 100%;
+}
+  
+span {    
+    font-family: 'Trirong', serif;
+    font-size: 40px; 
+    font-weight: 800;
+    font-style: italic; 
+    line-height: 1; 
+    color: rgba(0, 0, 0, 1);
+  }
+  
 h1 {
-    font-size: 50px;
-    font-weight: 700;
-    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 1);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 80px; 
+    font-weight: 800;
+    line-height: 0.8; 
+    color: rgba(0, 0, 0, 1);
 }
 
 h2 {
-    font-size: 40px;
-    font-weight: 400;
-    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 1);
+    font-family: 'Trirong', serif;
+    font-size: 40px; 
+    font-weight: 500;
+    font-style: italic; 
+    line-height: 1; 
+    color: rgba(0, 0, 0, 1);
 }
 
 h3 {
-    font-size: 26px;
-    font-weight: 700;
-    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 1);
+    font-family: 'Nunito+Sans', sans-serif;
+    font-size: 18px; 
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: rgba(77, 77, 77,1);
 }
 
 p {
     font-size: 20px;
-    font-weight: 300;
-    color: rgb(77, 77, 77);
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(77, 77, 77,1);
+}
+
+a { /* link styling */
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none; /* No underlining */
+}
+
+a:hover { /* hover link */
+    color: rgba(0, 0, 0, 0.8);
+}
+
+a:active { /* selected link */
+    color: rgba(0, 0, 0, 0.8);
+}
+
+a:visited { /* visited link */
+    color: rgba(0, 0, 0, 1);
+}
+
+a:focus {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    border: 4px;
+    border-color: black;
+    padding: 16px 24px 8px 24px;
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+    background-color: rgba(207,255,15,1);
+    font-family: 'Nunito+Sans', sans-serif;
+    font-size: 18px; 
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.button:hover {
+    opacity: 0.8; /* Reduces the opacity of the button to 80% */
+    text-decoration: none;
 }
