@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800&family=Trirong:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link href="img/favicon/favicon_package_v0.16/favicon-32x32.png" rel="shortcut icon">
-    <title>Product Designer | Bhumika Soam | Crawley, UK</title>
+    <title>UI/UX Designer | Bhumika Soam | Crawley, UK</title>
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <a href="index.html"><img src="img/svg/bhumika-soam_logo.svg" alt="Bhumika Soam Logo"></a>
+        <div class="container" margin-top>
+            <a href="index.html" class="button" id="logo-button">Bhumika Soam</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Work</a></li>
@@ -25,135 +28,164 @@
     </header>
 
     <main>
-        <section class="header" id="title">
-            <div class="container">
-                <h1>Emergency Contact Sign-up Process</h1>
-            </div>
-        </section>
-        <section class="project-detail" id="cover-image">
-            <div class="container">
+        <section id="pjt-cvr" >
+            <div class="container-cvr">
                 <picture>
                     <source srcset="img/1x/roar/roar-cover-1@1x.jpg" media="(max-width:767px)">
-                    <img src="img/2x/roar/roar-cover-1@2x.jpg" alt="Emergency Contact Sign-up Experience Cover Image">
+                    <img class="cvr-img" src="img/2x/roar/roar-cover-1@2x.jpg" alt="Emergency Contact Sign-up Experience Cover Image">
                 </picture>
             </div>
         </section>
-        <section class="project-detail" id="description"> <!-- row that holds (2) columns for Client and Role--> 
-            <div class="column"> <!-- column 2-->
-                <span>Role</span>
-                <p>Product Designer</p>
-                <p>(Worked in a team of 2)</p>
-            </div> 
-            <div class="column"> <!-- column 1-->
-                <span>Client</span>
-                <p>A B2B company aiming to empower people through technology to help create safer organizations.</p>
+
+        <section id="pjt-head">
+            <div class="container">
+                <h1>Emergency Contact Sign-up Experience</h1>
             </div>
         </section>
-        <section class="project-detail" id="goal"> <!-- open row that holds goals--> 
-            <span>Goal</span>
-            <p>This was a UI redesign project aimed at improving the web-based sign-up process for the Emergency Contacts invited by the ROAR Personal Safety app users.</p>
-            <p>Through research, we learned that often the contacts that were invited were looking for more clarity about what they were signing up for and wanted to be able to access that information as and when required in the sign-up process. Thus we came up with an enhanced web experience to meet their needs.</p>
+
+        <section id="pjt-des"> 
+            <div class="container">
+                <div class="row"><!-- open row that holds (2) columns for project 1--> 
+                    <div class="column-left"><!-- first column -->
+                        <div>                   
+                            <h2 class="fancy">Role</h2>
+                            <p>Product Designer (Worked in a team of 2)</p>
+                        </div> 
+                        <div>
+                            <h2>Client</h2>
+                            <p>A B2B company aiming to empower people through technology to help create safer organizations.</p>
+                        </div>
+                    </div><!-- end first column -->
+                    <div class="column-right"><!-- second column  -->
+                        <div>
+                            <h2 class="fancy">Goal</h2>
+                            <p>This was a UI redesign project aimed at improving the web-based sign-up process for the Emergency Contacts invited by the ROAR Personal Safety app users.</p>
+                            <p>Through research, we learned that often the contacts that were invited were looking for more clarity about what they were signing up for and wanted to be able to access that information as and when required in the sign-up process. Thus we came up with an enhanced web experience to meet their needs.</p>
+                        </div>
+                    </div>
+                </div>                    
+            </div>        
         </section>
-        <section class="project-detail" id="sign-up"> <!-- open row that holds original screens-->
-            <span>Original sign-up process</span>
-            <picture>
-                <source srcset="img/1x/roar/roar-ec-pg1@1x.png" media="(max-width:767px)">
-                <img src="img/2x/roar/roar-ec-pg1@2x.png" alt="Original Sign-up Screen 1">
-            </picture>
-            <picture>
-                <source srcset="img/1x/roar/roar-ec-pg2@1x.png" media="(max-width:767px)">
-                <img src="img/2x/roar/roar-ec-pg2@2x.png" alt="Original Sign-up Screen 2">
-            </picture>
-            <picture>
-                <source srcset="img/1x/roar/roar-ec-pg3@1x.png" media="(max-width:767px)">
-                <img src="img/2x/roar/roar-ec-pg3@2x.png" alt="Original Sign-up Screen 3">
-            </picture>
-            <picture>
-                <source srcset="img/1x/roar/roar-ec-pg4@1x.png" media="(max-width:767px)">
-                <img src="img/2x/roar/roar-ec-pg4@2x.png" alt="Original Sign-up Screen 4">
-            </picture>
-            <picture>
-                <source srcset="img/1x/roar/roar-ec-pg5@1x.png" media="(max-width:767px)">
-                <img src="img/2x/roar/roar-ec-pg5@2x.png" alt="Original Sign-up Screen 5">
-            </picture>
+
+        <section id="sign-up"> <!-- open row that holds original screens-->
+            <div class="container">
+                <h2 class="fancy">Original sign-up process</h2>
+                <div class="ogscreens">
+                    <picture>
+                        <source srcset="img/2x/roar/roar-ogscreen-1@1x.png" media="(max-width:767px)">
+                        <img class="mobile-scn" src="img/2x/roar/roar-ogscreen-1@2x.png" alt="Original Sign-up Screen 1">
+                    </picture>
+                    <picture>
+                        <source srcset="img/2x/roar/roar-ogscreen-2@1x.png" media="(max-width:767px)">
+                        <img class="mobile-scn" src="img/2x/roar/roar-ogscreen-2@2x.png" alt="Original Sign-up Screen 2">
+                    </picture>
+                    <picture>
+                        <source srcset="img/2x/roar/roar-ogscreen-3@1x.png" media="(max-width:767px)">
+                        <img class="mobile-scn" src="img/2x/roar/roar-ogscreen-3@2x.png" alt="Original Sign-up Screen 3">
+                    </picture>
+                    <picture>
+                        <source srcset="img/2x/roar/roar-ogscreen-4@1x.png" media="(max-width:767px)">
+                        <img class="mobile-scn" src="img/2x/roar/roar-ogscreen-4@2x.png" alt="Original Sign-up Screen 4">
+                    </picture>
+                    <picture>
+                        <source srcset="img/2x/roar/roar-ogscreen-5@1x.png" media="(max-width:767px)">
+                        <img class="mobile-scn" src="img/2x/roar/roar-ogscreen-5@2x.png" alt="Original Sign-up Screen 5">
+                    </picture>
+                </div>
+            </div>  
         </section>
-        <section class="project-detail" id="key-findings"> <!-- open row that holds key findings-->
-            <span>Key findings</span>
-            <picture>
-                <source srcset="img/1x/roar/roar-brainstorming@1x.jpg" media="(max-width:767px)">
-                <img src="img/2x/roar/roar-brainstorming@2x.jpg" alt="Brainstorming sessions">
-                <ol>
-                    <li>The user flow should be interactive and simple yet informative.</li>
-                    <li>The invited contact should have enough information on the product, their role and be able to clarify any concerns with ease, to make a decision comfortably.</li>
-                    <li>The user should be able to identify how far along in the process they are. They should also be able to easily access any information needed after the sign-up process is complete.</li>
-                </ol>
-            </picture>
-        </section>
-        <section class="project-detail" id="ideation"> <!-- open row that holds ideation & wireframes-->
-            <span>Ideation and wireframes</span>
-            <p>We explored both, the horizontal and vertical scrolling layouts and tested them out with our users to see what worked better for them.</p>
-            <picture>
-                <source srcset="img/1x/roar/roar-wireframes@1x.jpg" media="(max-width:767px)">
-                <img src="img/2x/roar/roar-wireframes@2x.jpg" alt="Wireframes">
-            </picture>
-        </section>
-        <section class="project-detail" id="flow"> <!-- open row that holds user flow chart-->
-            <span>User flow chart</span>
-            <div class="imgContainer">
+
+        <section id="findings"> <!-- open row that holds key findings-->
+            <div class="container" >
+                <h2 class="fancy">Key findings</h2>
                 <picture>
-                    <source srcset="img/1x/roar/roar-gif@1x.mp4" media="(max-width:767px)">
-                    <img src="img/2x/roar/roar-gif@2x.mp4" alt="Prototype">
+                    <source srcset="img/1x/roar/roar-brainstorming@1x.jpg" media="(max-width:767px)">
+                    <img src="img/2x/roar/roar-brainstorming@2x.jpg" alt="Brainstorming sessions">
                 </picture>
+                <div>
+                    <p class="bubble" id="idea1"> The user flow should be interactive and simple yet informative.</p>
+                </div>
+                <div>
+                    <p class="bubble" id="idea2">The invited contact should have enough information on the product, their role and be able to clarify any concerns with ease, to make a decision comfortably.</p>
+                </div>
+                <div>
+                    <p class="bubble" id="idea3">The user should be able to identify how far along in the process they are. They should also be able to easily access any information needed after the sign-up process is complete.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ideation"> <!-- open row that holds ideation & wireframes-->
+            <div class="container">
+                <h2 class="fancy">Ideation and wireframes</h2>
+                <p class="bubble" id="wireframes"> We explored both, the horizontal and vertical scrolling layouts and tested them out with our users to see what worked better for them.</p>
+                <picture>
+                    <source srcset="img/1x/roar/roar-wireframes@1x.jpg" media="(max-width:767px)">
+                    <img src="img/2x/roar/roar-wireframes@2x.jpg" alt="Wireframes">
+                </picture>
+            </div>
+        </section>
+        
+        <section id="flow"> <!-- open row that holds user flow chart-->
+            <div class="container">
+                <h2 class="fancy">User flow chart</h2>
                 <picture>
                     <source srcset="img/1x/roar/roar-flowchart@1x.png" media="(max-width:767px)">
                     <img src="img/2x/roar/roar-flowchart@2x.png" alt="Flow chart">
                 </picture>
+                <div class="video-wrapper">
+                    <video class="video-container" autoplay loop>
+                        <source id="vid-proto" src="img/2x/roar/roar-gif@2x.mp4" type="video/mp4">
+                    </video>                
+                </div>
             </div>
-            <div class="imgContainer">
+        </section>
+        
+        <section id="testing"> <!-- open row that holds (2) columns for User testing--> 
+            <div class="container">
+                <h2 class="fancy">User testing</h2>
                 <picture>
-                    <source srcset="img/1x/roar/roar-final-flow@1x.png" media="(max-width:767px)">
-                    <img src="img/2x/roar/roar-final-flow@2x.png" alt="Screens on laptop">
+                    <source srcset="img/1x/roar/roar-testing@1x.jpg" media="(max-width:767px)">
+                    <img src="img/2x/roar/roar-testing@2x.jpg" alt="User testing results">
+                </picture>
+                <p class="pcenter">We interviewed 15 users for the 1st and 20 people for the 2nd round of prototype testing that gave us a lot of good feedback to refine the flow and UI.</p>
+                <div class="bubblewrapper">
+                    <p class="bubbleic" id="insight1"> Make the language much more  relatable to the user by adding a more personal touch.</p>
+                    <!-- <img class="bulbic" src="img/svg/bulb-IC.svg" alt="Bulb icon" height="60px" width="60px">                   -->
+                </div>
+                <div class="bubblewrapper">                   
+                    <p class="bubbleic" id="insight2"> Refine the interface such that the users don’t have to dig to get more information at any given point in the flow.</p>
+                    <!-- <img class="bulbic" src="img/svg/bulb-IC.svg" alt="Bulb icon" height="60px" width="60px">                   -->
+                </div>
+            </div>
+        </section>
+        
+        <section id="fscreens"> <!-- open row that holds final screens--> 
+            <div>
+                <h2 class="fancy2">Final screens</h2>
+                <p class="pcenter">Based on the feedback from testing, the final flow was polished and resulted in the 5 main steps shown below.</p>
+                <picture>
+                    <source srcset="img/1x/roar/roar-final-screens@1x.png" media="(max-width:767px)">
+                    <img src="img/2x/roar/roar-final-screens@2x.png" alt="Final screens">
                 </picture>
             </div>
         </section>
-        <section class="project-detail" id="testing"> <!-- open row that holds (2) columns for User testing--> 
-            <span>User testing</span>
-            <p>We interviewed 15 users for the 1st and 20 people for the 2nd round of prototype testing that gave us a lot of good feedback to refine the flow and UI.</p>
-            <picture>
-                <source srcset="img/1x/roar/roar-testing@1x.jpg" media="(max-width:767px)">
-                <img src="img/2x/roar/roar-testing@2x.jpg" alt="User testing results">
-            </picture>
-            <div class="column"> <!-- column 1-->
-                <img src="img/svg/bulb-IC.svg" alt="User testing results" height="60px">
-                <p>Make the language much more  relatable to the user by adding a more personal touch.</p>
-            </div>
-            <div class="column"> <!-- column 2-->
-                <img src="img/svg/bulb-IC.svg" alt="User testing results" height="60px">
-                <p>Refine the interface such that the users don’t have to dig to get more information at any given point in the flow.</p>
-            </div> <!-- end of row 7-->
-        </section>
-        <section class="project-detail" id="final-screens"> <!-- open row that holds final screens--> 
-            <span>Final screens</span>
-            <p>The web-based interface we built was divided into 5 main steps based on the user feedback.</p>
-            <picture>
-                <source srcset="img/1x/roar/roar-final-screens@1x.png" media="(max-width:767px)">
-                <img src="img/2x/roar/roar-final-screens@2x.png" alt="Final screens">
-            </picture>
-        </section>
+    
     </main>
 
-    <footer id="contact">
-        <div class="container">
-            <div><!-- social media links -->
-                <a href="#" target="_blank">
-                    <svg enable-background="new 0 0 56.693 56.693" height="40px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" width="40px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/><path d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12   c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z    M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88   C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078   c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179   c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/></g></svg>          
-                </a>
-                <a href="#" target="_blank">
-                    <svg height="40px" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="40px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm6.245,330.656c0.918,-13.824 -0.208,-27.022 -3.408,-39.661c-3.229,-12.658 -8.408,-23.944 -15.66,-33.809c-7.262,-9.885 -16.512,-17.781 -27.778,-23.613c-11.324,-5.908 -24.513,-8.805 -39.585,-8.805c-13.653,0 -25.98,2.424 -37.161,7.243c-11.172,4.847 -20.763,11.475 -28.858,19.873c-8.076,8.35 -14.23,18.31 -18.661,29.852c-4.355,11.503 -6.58,23.944 -6.58,37.265c0,13.775 2.14,26.491 6.391,37.975c4.298,11.541 10.329,21.369 18.093,29.681c7.972,8.285 17.439,14.628 28.772,19.163c11.343,4.469 23.973,6.741 38.004,6.741c20.138,0 37.407,-4.611 51.58,-13.861c14.344,-9.221 24.844,-24.531 31.774,-45.975l-43.097,0c-1.667,5.51 -5.984,10.822 -13.075,15.792c-7.158,4.98 -15.679,7.47 -25.544,7.47c-13.729,0 -24.323,-3.597 -31.66,-10.755c-7.347,-7.158 -12.1,-20.488 -12.1,-34.576l128.553,0Zm-280.454,77.294c11.04,0 21.805,-1.391 32.171,-4.137c10.491,-2.755 19.835,-6.997 27.987,-12.763c8.086,-5.718 14.647,-13.131 19.466,-22.277c4.781,-9.042 7.167,-19.778 7.167,-32.257c0,-15.394 -3.664,-28.517 -11.134,-39.49c-7.432,-10.897 -18.661,-18.557 -33.781,-22.912c11.106,-5.264 19.428,-12.033 25.089,-20.289c5.634,-8.275 8.436,-18.623 8.436,-31.007c0,-11.447 -1.884,-21.132 -5.624,-28.867c-3.844,-7.849 -9.212,-14.079 -16.066,-18.766c-6.969,-4.686 -15.196,-8.104 -24.853,-10.149c-9.705,-2.111 -20.328,-3.124 -32.096,-3.124l-115.999,0l0,246.038l119.237,0Zm-6.173,-109.655c11.655,0 21.132,2.679 28.252,8.076c7.091,5.463 10.67,14.476 10.67,27.153c0,6.467 -1.051,11.826 -3.238,15.954c-2.178,4.146 -5.188,7.422 -8.805,9.808c-3.636,2.481 -7.925,4.166 -12.772,5.217c-4.772,1.07 -9.847,1.543 -15.177,1.543l-57.829,0l0,-67.751l58.899,0Zm226.403,-26.671c-5.823,-6.428 -15.66,-9.913 -27.675,-9.913c-7.82,0 -14.287,1.316 -19.475,3.996c-5.075,2.651 -9.221,5.936 -12.393,9.818c-3.162,3.938 -5.302,8.104 -6.561,12.554c-1.25,4.336 -2.007,8.265 -2.225,11.74l79.605,0c-1.165,-12.478 -5.435,-21.709 -11.276,-28.195Zm-234.612,-67.799c4.801,0.001 9.469,0.341 13.937,1.212c4.535,0.786 8.455,2.225 11.92,4.318c3.484,2.016 6.258,4.885 8.35,8.559c2.017,3.673 3.011,8.407 3.011,14.125c0,10.32 -3.011,17.828 -9.24,22.382c-6.296,4.62 -14.249,6.893 -23.84,6.893l-54.828,0l0,-57.489l50.69,0Zm255.999,-1.126l0,-24.276l-99.733,0l0,24.276l99.733,0Z"/></svg>       
-                </a>
-            </div><!-- social media links end -->
-            <p>Bhumika Soam &copy;2013-2023 - all rights reserved.</p>         
-        </div>
+    <footer >
+        <section id="smlinks">
+            <div class="container">
+                <div><!-- social media links -->
+                    <a href="#" target="_blank">
+                        <svg enable-background="new 0 0 56.693 56.693" height="40px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" width="40px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/><path d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12   c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z    M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88   C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078   c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179   c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/></g></svg>          
+                    </a>
+                    <a href="#" target="_blank">
+                        <svg height="38px" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="40px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm6.245,330.656c0.918,-13.824 -0.208,-27.022 -3.408,-39.661c-3.229,-12.658 -8.408,-23.944 -15.66,-33.809c-7.262,-9.885 -16.512,-17.781 -27.778,-23.613c-11.324,-5.908 -24.513,-8.805 -39.585,-8.805c-13.653,0 -25.98,2.424 -37.161,7.243c-11.172,4.847 -20.763,11.475 -28.858,19.873c-8.076,8.35 -14.23,18.31 -18.661,29.852c-4.355,11.503 -6.58,23.944 -6.58,37.265c0,13.775 2.14,26.491 6.391,37.975c4.298,11.541 10.329,21.369 18.093,29.681c7.972,8.285 17.439,14.628 28.772,19.163c11.343,4.469 23.973,6.741 38.004,6.741c20.138,0 37.407,-4.611 51.58,-13.861c14.344,-9.221 24.844,-24.531 31.774,-45.975l-43.097,0c-1.667,5.51 -5.984,10.822 -13.075,15.792c-7.158,4.98 -15.679,7.47 -25.544,7.47c-13.729,0 -24.323,-3.597 -31.66,-10.755c-7.347,-7.158 -12.1,-20.488 -12.1,-34.576l128.553,0Zm-280.454,77.294c11.04,0 21.805,-1.391 32.171,-4.137c10.491,-2.755 19.835,-6.997 27.987,-12.763c8.086,-5.718 14.647,-13.131 19.466,-22.277c4.781,-9.042 7.167,-19.778 7.167,-32.257c0,-15.394 -3.664,-28.517 -11.134,-39.49c-7.432,-10.897 -18.661,-18.557 -33.781,-22.912c11.106,-5.264 19.428,-12.033 25.089,-20.289c5.634,-8.275 8.436,-18.623 8.436,-31.007c0,-11.447 -1.884,-21.132 -5.624,-28.867c-3.844,-7.849 -9.212,-14.079 -16.066,-18.766c-6.969,-4.686 -15.196,-8.104 -24.853,-10.149c-9.705,-2.111 -20.328,-3.124 -32.096,-3.124l-115.999,0l0,246.038l119.237,0Zm-6.173,-109.655c11.655,0 21.132,2.679 28.252,8.076c7.091,5.463 10.67,14.476 10.67,27.153c0,6.467 -1.051,11.826 -3.238,15.954c-2.178,4.146 -5.188,7.422 -8.805,9.808c-3.636,2.481 -7.925,4.166 -12.772,5.217c-4.772,1.07 -9.847,1.543 -15.177,1.543l-57.829,0l0,-67.751l58.899,0Zm226.403,-26.671c-5.823,-6.428 -15.66,-9.913 -27.675,-9.913c-7.82,0 -14.287,1.316 -19.475,3.996c-5.075,2.651 -9.221,5.936 -12.393,9.818c-3.162,3.938 -5.302,8.104 -6.561,12.554c-1.25,4.336 -2.007,8.265 -2.225,11.74l79.605,0c-1.165,-12.478 -5.435,-21.709 -11.276,-28.195Zm-234.612,-67.799c4.801,0.001 9.469,0.341 13.937,1.212c4.535,0.786 8.455,2.225 11.92,4.318c3.484,2.016 6.258,4.885 8.35,8.559c2.017,3.673 3.011,8.407 3.011,14.125c0,10.32 -3.011,17.828 -9.24,22.382c-6.296,4.62 -14.249,6.893 -23.84,6.893l-54.828,0l0,-57.489l50.69,0Zm255.999,-1.126l0,-24.276l-99.733,0l0,24.276l99.733,0Z"/></svg>       
+                    </a>
+                </div><!-- social media links end -->
+                <p>Bhumika Soam &copy;2013-2023 - all rights reserved.</p>         
+            </div>
+        </section>
     </footer>
 </body>
 </html>
