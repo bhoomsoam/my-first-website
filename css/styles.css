@@ -46,7 +46,7 @@ element,element,.. - div, p - Selects all <div> elements and all <p> elements
 body {
     background-color: var(--bgprimaryc);
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 18px; /* Sets the font size to 16px */
+    font-size: 1.1rem; /* Sets the font size to 16px */
     font-weight: 400; /* Sets the font weight to 300 */
     line-height: 1.5; /* Sets the line-height to 1.6 * the font-size */
     color: var(--primaryc);
@@ -59,16 +59,16 @@ img {
 h1 {
     /* background-color: var(--bgprimaryc); */
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 60px; 
+    font-size: 4rem; 
     font-weight: 800;
-    line-height: 0.8; 
+    line-height: 1; 
     color: var(--primaryc);
 }
 
 h2 {
     /* background-color: var(--bgprimaryc); */
     font-family: 'Trirong', serif;
-    font-size: 24px; 
+    font-size: 1.5rem; 
     font-weight: 500;
     font-style: italic; 
     line-height: 1; 
@@ -78,20 +78,12 @@ h2 {
 h3 {
     /* background-color: var(--bgprimaryc); */
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 18px; 
+    font-size: 1.1rem; 
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 1;
     text-transform: uppercase;
     color: var(--secondaryc);
-}
-
-p {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 18px; /* Sets the font size to 16px */
-    font-weight: 400; /* Sets the font weight to 300 */
-    line-height: 1.5; /* Sets the line-height to 1.6 * the font-size */
-    color: var(--primaryc);
 }
 
 /* Layout styling */
@@ -100,10 +92,11 @@ p {
     /* Common*/
     
     .container {
-        width: 100%;
         max-width: 1200px;
-        padding: 0 16px;
+        padding: 0 24px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .row {
@@ -111,27 +104,22 @@ p {
     }
 
     header {
-        /* text-align: center; */
-        padding: 16px 0;
+        padding: 16px 0 0 0;
         width: 100%;
         position: fixed;
         z-index: 9999;
-        width: [object Object]px; 
-        height: [object Object]px; 
         background: var(--primaryc); 
         box-shadow: 0 7px 18px rgba(0, 0, 0, 0.1)  ; 
         -webkit-box-shadow: 0 7px 18px rgba(0, 0, 0, 0.1)  ; 
         -moz-box-shadow: 0 7px 18px rgba(0, 0, 0, 0.1)  ; 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
 
     header .container {
         width: 100%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-between; */
     } 
 
     div .logo {
@@ -158,7 +146,7 @@ p {
     }
 
     nav > ul > li > a {
-        padding: 0 24px;
+        padding: 0 8px;
         text-transform: uppercase;
         font-weight: 700;
         color: var(--bgprimaryc);    
@@ -185,14 +173,14 @@ p {
         width: 100%;
     }
 
-    #hero,
-    #pjt-head {
+    #hero {
         display: inline-block;
         width: 100%;
+        padding: 80px 24px 0 24px;
+        text-align: center;
     }
 
     #hero .container {
-        padding: 40px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -212,7 +200,7 @@ p {
     }
 
     #hero h2 {
-        width: 0 auto;
+        padding-bottom: 24px;
         max-width: 800px;
         text-align: center;
         line-height: 1.2;
@@ -227,13 +215,13 @@ p {
     }
     
     .column-left-index {
-        padding-right: 36px;
-        width: 40%;
+        /* padding-right: 36px; */
+        width: 100%;
         align-self: flex-start;
     }
 
     .column-right-index {
-        width: 60%;
+        width: 100%;
         display: flex;
         padding-bottom: 8px;
         flex-direction: column;
@@ -255,12 +243,12 @@ p {
     }
 
     footer .container{
-        padding: 40px 0 18px 0;
         background-color: var(--bgsecondaryc);
     }
 
     footer {
         text-align: center;
+        padding: 40px 0 18px 0;
     }
 
     .fancy{
@@ -274,7 +262,7 @@ p {
     .fancy:after {
         content: '';
         border-top: 2px solid;
-        margin: 40px 40px;
+        margin: 0px 40px;
         flex: 1 0 20px;
     }
     
@@ -290,21 +278,21 @@ p {
     .fancy2:after {
         content: '';
         border-top: 2px solid;
-        margin: 40px 40px;
+        /* margin: 40px 40px; */
         flex: 1 0 20px;
     }
     /* Index & Misc pages*/
     
-    #work { 
-        padding: 40px;
-    }
+    /* #work { 
+        padding: 20px;
+    } */
 
     #work .row,
     #tools .row,
     #pjt-des .row { 
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
     }
 
@@ -319,7 +307,7 @@ p {
         padding: 20px 0;
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
     }
 
@@ -333,12 +321,12 @@ p {
         flex-wrap: wrap;
         padding-left: 20px;
         width: 100%;
-        height: 100px;
+        /* height: 100px; */
     }
 
     #tools .column-right-index > ul > li {
         display: inline-block;
-        padding: 8px 24px;
+        padding: 8px 16px;
     }
 
 
@@ -349,14 +337,13 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* border-top: 6px dotted var(--primaryc);  */
     }
 
-    #contactfooter {
+    /* #contactfooter {
         width: 100%;
         position: absolute;
         bottom: 0;
-    }
+    } */
 
     #contact h2 {
         width: 100%;
@@ -367,6 +354,13 @@ p {
 
 
     /* Project pages */
+
+    #pjt-head {
+        display: inline-block;
+        width: 100%;
+        padding: 0px 24px 0 24px;
+        text-align: center;
+    }
 
     .cvr-img {
         width: 100%;
@@ -381,7 +375,7 @@ p {
         background-color: var(--bgsecondaryc);
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
@@ -392,12 +386,12 @@ p {
 
     .column-left {
         padding-right: 36px;
-        width: 50%;
+        /* width: 50%; */
         align-self: flex-start;
     }
 
     .column-right {
-        width: 50%;
+        /* width: 50%; */
         display: flex;
         padding-bottom: 8px;
         flex-direction: column;
@@ -514,26 +508,26 @@ p {
 
 /* Form styling */
 
-    .formcarry-container {
+    #formcarry-container {
     box-sizing: border-box;
-    margin: 40px auto 0 auto;
-    padding: 0;
+    margin: 24px auto;
+    padding: 0 20px;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 18px; 
+    font-size: 1.1rem; 
     font-weight: 800;
     letter-spacing: 1px;
     line-height: 1;
     text-transform: uppercase;
     color: var(--primaryc);
-    width: 600px;
+    max-width: 600px;
   }
 
-  .formcarry-container * {
+    #formcarry-container * {
     /* box-sizing: border-box; */
     padding: 8px 0;
   }
 
-  .formcarry-container label {
+  #formcarry-container label {
     display: inline-block;
     cursor: pointer;
   }
@@ -544,7 +538,7 @@ p {
     align-items: left;
   }
 
-  .formcarry-container .formcarry-block:not(:first-child) {
+  #formcarry-container .formcarry-block:not(:first-child) {
     margin-top: 10px;
   }
 
@@ -552,9 +546,9 @@ p {
   =            Fields           =
   =============================================*/
   
-  .formcarry-container input,
-  .formcarry-container textarea,
-  .formcarry-container select {
+  #formcarry-container input,
+  #formcarry-container textarea,
+  #formcarry-container select {
     margin-top: 4px;
     width: 100%;
     height: 42px;
@@ -565,53 +559,53 @@ p {
     
     background-color: var(--bgprimaryc);
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 16px; 
+    font-size: 1.1rem; 
     font-weight: 400;
     transition: 125ms background, 125ms color, 125ms box-shadow;
   }
 
-  .formcarry-container textarea{
+  #formcarry-container textarea{
     min-height: 188px;
     max-width: 100%;
     padding-top: 12px;
   }
 
-  .formcarry-container input::placeholder,
-  .formcarry-container textarea::placeholder,
-  .formcarry-container select::placeholder {
+  #formcarry-container input::placeholder,
+  #formcarry-container textarea::placeholder,
+  #formcarry-container select::placeholder {
     color: var(--tertiaryc);
   }
 
-  .formcarry-container input:hover,
-  .formcarry-container textarea:hover,
-  .formcarry-container select:hover {
+  #formcarry-container input:hover,
+  #formcarry-container textarea:hover,
+  #formcarry-container select:hover {
     border-color: var(--tertiaryc);
     background-color: var(--bgsecondaryc);
   }
 
-  .formcarry-container input:hover::placeholder,
-  .formcarry-container textarea:hover::placeholder,
-  .formcarry-container select:hover::placeholder {
+  #formcarry-container input:hover::placeholder,
+  #formcarry-container textarea:hover::placeholder,
+  #formcarry-container select:hover::placeholder {
     color: var(--tertiaryc);
   }
 
-  .formcarry-container input:focus,
-  .formcarry-container textarea:focus,
-  .formcarry-container select:focus {
+  #formcarry-container input:focus,
+  #formcarry-container textarea:focus,
+  #formcarry-container select:focus {
     background-color: var(--bgprimaryc);
     border: 2px solid rgba(var(--tertiaryc));
   }
 
-  .formcarry-container input:focus,
-  .formcarry-container select:focus {
+  #formcarry-container input:focus,
+  #formcarry-container select:focus {
     padding: 8px 11px;
   }
 
-  .formcarry-container textarea:focus {
+  #formcarry-container textarea:focus {
     padding: 11px;
   }
 
-  .formcarry-container select {
+  #formcarry-container select {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9997 14.5001L8.46387 10.9642L9.64303 9.78589L11.9997 12.1434L14.3564 9.78589L15.5355 10.9642L11.9997 14.5001Z' fill='%236C6F93'/%3E%3C/svg%3E%0A");
     background-size: 24px 24px;
     background-position: 98%;
@@ -620,10 +614,10 @@ p {
     -webkit-appearance: none;
   }
 
-  .formcarry-container input:focus:required:invalid,
-  .formcarry-container input:focus:invalid, 
-  .formcarry-container select:focus:required:invalid,
-  .formcarry-container select:focus:invalid
+  #formcarry-container input:focus:required:invalid,
+  #formcarry-container input:focus:invalid, 
+  #formcarry-container select:focus:required:invalid,
+  #formcarry-container select:focus:invalid
   {
     color: rgba(var(--errorc)); 
     border-color: rgba(var(--errorc));
@@ -712,6 +706,7 @@ p {
         font-family: 'Montserrat Alternates', sans-serif;;
         color: var(--bgprimaryc);
         font-weight: 600;
+        max-width: 260px;
     }
 /*=====  End of Links and button styling  ======*/
   
