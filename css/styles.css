@@ -341,12 +341,12 @@ h3 {
 
     /* Contact page */
 
-    #contact .container {
+    /* #contact .container {
         padding: 32px;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+    } */
 
     /* #contactfooter {
         width: 100%;
@@ -354,12 +354,12 @@ h3 {
         bottom: 0;
     } */
 
-    #contact h2 {
+    /* #contact h2 {
         width: 100%;
         max-width: 500px;
         text-align: center;
         line-height: 1.2;
-    }
+    } */
 
 
     /* Project pages */
