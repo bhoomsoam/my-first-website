@@ -164,6 +164,7 @@ h3 {
         text-transform: uppercase;
         font-weight: 700;
         color: var(--bgprimaryc);    
+        transition: all 0.5s;
     }
 
     nav > ul > li > a:visited {
@@ -283,6 +284,11 @@ h3 {
         box-shadow: 8px 8px 0px 0px var(--accentc);
     }
     
+    #about-picture {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
 
 
     /* About me page*/
@@ -589,7 +595,8 @@ h3 {
         color: var(--primaryc);
         letter-spacing: 2px;
         text-align: center;
-        text-transform: uppercase
+        text-transform: uppercase;
+        transition: 0.4s;
     }
 
     .button:visited {
@@ -626,16 +633,37 @@ h3 {
 
     #logo-button {
         border: 2px solid var(--bgprimaryc);
-        background-color: var(--primaryc);
+        background-color: 45deg var(--primaryc);
         font-family: 'Montserrat Alternates', sans-serif;;
         color: var(--bgprimaryc);
         font-weight: 600;
         max-width: 260px;
+        transition: color 0.2s linear;
+        position: relative;
+    
+        &:hover{
+            color: var(--primaryc);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--bgprimaryc);
+            transform: scale(0, 1);
+            transition: transform ease-in-out 100ms;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            transform: scale(1, 1);
+        }
     }
+
 
 /*=====  End of Links and button styling  ======*/
   
-@media (min-width: 1024px){
+@media only screen and (min-width: 992px) {
     
     /* Project pages */
   
@@ -844,6 +872,26 @@ h3 {
         width: 50%;
     }
 
+    .column-left-index {
+        width: 40%;
+    }
+
+    .column-right-index {
+        width: 60%;
+    }
+
+    .hero h1 {
+        padding: 52px 0 16px 0;
+    }
+
+    .hero h2 {
+        padding-bottom: 76px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
     nav > ul {
         gap: 32px;
     }
@@ -853,17 +901,52 @@ h3 {
         justify-content: space-between;
     } 
 
-    .column-left-index {
-        width: 40%;
+    h1 {
+        font-size: 4rem;
     }
-
-    .column-right-index {
-        width: 60%;
-    }
-
+    
     main {
         width: auto;
         padding-top: 91px;
     }
 
+}
+
+/* Animations */
+
+.sun {
+    animation: 4s color-change infinite alternate linear;
+}
+
+.sun-outline {
+    animation: rotate 4s linear infinite ;
+}
+
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@keyframes color-change {
+    0% {fill: #edc655;}
+    50% {fill: #fcffad;}
+    100% {fill: #f76414;}
+}
+
+@keyframes cloud-move {
+    from {transform: translate(0,50px);}
+    to {transform: translate(200px,50px);}
+}
+
+@keyframes cloud-move-reverse {
+    from {transform: translate(446px,48px);}
+    to {transform: translate(100px, 48px);}
+}
+
+@keyframes rotate {
+    0% {rotate: 0deg;}
+    100% {rotate: z 360deg;}
 }
