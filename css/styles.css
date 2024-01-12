@@ -328,7 +328,11 @@ h3 {
         max-height: 50px;
     }
 
-
+    .aboutme #illustration{
+        max-width: 828px;
+        height: auto;
+        align-items: center;
+    }
 
     /* Project pages */
 
@@ -631,32 +635,57 @@ h3 {
         text-decoration: none;
     }
 
-    #logo-button {
+    header .button {
         border: 2px solid var(--bgprimaryc);
-        background-color: 45deg var(--primaryc);
         font-family: 'Montserrat Alternates', sans-serif;;
+        background-color: var(--primaryc);
         color: var(--bgprimaryc);
         font-weight: 600;
         max-width: 260px;
-        transition: color 0.2s linear;
+        transition: 
+            color 0.2s linear, 
+            letter-spacing 0.2s ease-in-out;
+
+        &:visited {
+            color: var(--bgprimaryc);
+            background-color: var(--primaryc);
+        }
+
+        &:hover {
+            color: var(--bgprimaryc);
+            letter-spacing: 0.15em;
+        }
+    }
+
+    .effect01 {
+        overflow: hidden;
         position: relative;
-    
-        &:hover{
-            color: var(--primaryc);
-        }
+        transition: all 0.3s ease-in-out;
 
-        &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
+        &::after{
             background: var(--bgprimaryc);
-            transform: scale(0, 1);
-            transition: transform ease-in-out 100ms;
-            z-index: -1;
+            border: 0px solid var(--bgprimaryc);
+            content: "";
+            height: 155px;
+            left: -75px;
+            opacity: 0.8;
+            position: absolute;
+            top: -50px;
+            -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+            width: 50px;
+            transition: all 1s cubic-bezier(0.075,0.82, 0.165, 1);
+            z-index: 1;
         }
-
-        &:hover::before {
-            transform: scale(1, 1);
+    
+        &:hover::after {
+            background-color: var(--primaryc);
+            font-size: 20px;
+            border: 20px solid var(--bgprimaryc);
+            opacity: 1;
+            left: 120%;
+            -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
         }
     }
 
@@ -915,19 +944,15 @@ h3 {
 /* Animations */
 
 .sun {
-    animation: 4s color-change infinite alternate linear;
-}
-
-.sun-outline {
     animation: rotate 4s linear infinite ;
 }
 
-.cloud-front {
+.cloud {
     animation: 30s cloud-move infinite alternate linear;
 }
 
-.cloud-back {
-    animation: 34s cloud-move-reverse infinite alternate linear;
+.cloud2 {
+    animation: 30s cloud-move-reverse infinite alternate linear;
 }
 
 @keyframes color-change {
@@ -937,16 +962,16 @@ h3 {
 }
 
 @keyframes cloud-move {
-    from {transform: translate(0,50px);}
-    to {transform: translate(200px,50px);}
+    from {transform: translate(80px,80px);}
+    to {transform: translate(200px,80px);}
 }
 
 @keyframes cloud-move-reverse {
-    from {transform: translate(446px,48px);}
-    to {transform: translate(100px, 48px);}
+    from {transform: translate(300px,10px);}
+    to {transform: translate(100px, 10px);}
 }
 
 @keyframes rotate {
     0% {rotate: 0deg;}
-    100% {rotate: z 360deg;}
+    100% {rotate: z 150deg;}
 }
