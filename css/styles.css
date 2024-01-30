@@ -145,6 +145,11 @@ h3 {
         top: 18%;
     }
 
+    nav {
+        transition: 400ms;
+        transition-timing-function: ease-in-out;
+    }
+
     nav > ul {
         list-style-type: none;
         padding: 0;
@@ -179,10 +184,12 @@ h3 {
 
     nav > ul > li > a:hover {
         color: var(--accentc);
+        text-decoration: none;
     }
 
     nav > ul > li > a:focus {
         color: var(--accentc);
+        text-decoration: none;
     }
 
     nav > ul > li > a:active {
@@ -196,6 +203,7 @@ h3 {
     .navtoggle, .navtoggle.responsive {
         position: relative;
         gap: 0;
+        transition: 400ms;
     }
 
     .navtoggle li .icham {
@@ -207,20 +215,19 @@ h3 {
         padding-right: 0;
     }
 
-    /* .navtoggle.responsive nav {
+    .navtoggle.responsive nav {
         padding: 24px 0 0;
-    } */
+    }
 
     .navtoggle.responsive li  {
         display: flex;
         flex-direction: column;
         padding: 10px 0;
-        border-top: 1px solid var(--tertiaryc);
     }
         
-    /* .navtoggle.responsive li:last-child  {
-        padding: 0 0 10px;
-    } */
+    .navtoggle.responsive li:last-child  {
+        padding: 0 0 16px 0;
+    }
 
     main {
         padding-top: 88.39px;
@@ -321,11 +328,33 @@ h3 {
         height: auto;
     }
 
-    .smlinks svg:hover {
+    .smlinks svg:visited,
+    .icham:visited {
+        fill: var(--primaryc)
+    }
+    
+    .smlinks svg:hover,
+    .icham:hover {
         fill: var(--tertiaryc)
     }
 
-      
+    .smlinks svg:focus,
+    .icham:focus {
+        fill: var(--tertiaryc)
+    }
+
+    .smlinks svg:active,
+    .icham:active {
+        fill: var(--primaryc)
+    }
+
+    /* .scrollContainer {
+        height: 0px;
+        overflow: auto;
+        scrollbar-gutter: stable both-edges;
+        flex: 1 1 auto;
+    } */
+
 
     /* Index & Misc pages*/  
 
@@ -1080,7 +1109,7 @@ h3 {
     }
 
     .hero h1 {
-        padding: 52px 0 16px 0;
+        padding: 52px 0 40px 0;
     }
 
     .hero h2 {
