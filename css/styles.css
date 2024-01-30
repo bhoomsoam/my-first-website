@@ -198,7 +198,8 @@ h3 {
         gap: 0;
     }
 
-    .navtoggle li .icon {
+    .navtoggle li .icham {
+        color: var(--bgprimaryc);
         position: absolute;
         right: 0;
         top: 16px;
