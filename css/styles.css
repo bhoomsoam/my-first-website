@@ -45,12 +45,14 @@ element,element,.. - div, p - Selects all <div> elements and all <p> elements
 
 body {
     margin: 0;
+    height: 100%;
     background-color: var(--bgprimaryc);
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1.1rem; /* Sets the font size to 16px */
     font-weight: 400; /* Sets the font weight to 300 */
     line-height: 1.5; /* Sets the line-height to 1.6 * the font-size */
     color: var(--primaryc);
+    position: relative;
 }
 
 img {
@@ -94,6 +96,16 @@ h3 {
 
 
     /* Common*/
+
+    footer {
+        background-color: var(--bgsecondaryc);
+        text-align: center;
+        padding: 40px 0 40px 0;
+    }
+
+    footer p {
+        margin: 0;
+    }
     
     section {
         margin: 24px 0;
@@ -306,15 +318,7 @@ h3 {
         padding-bottom: 16px;
     }
 
-    footer {
-        background-color: var(--bgsecondaryc);
-        text-align: center;
-        padding: 40px 0 40px 0;
-    }
 
-    footer p {
-        margin: 0;
-    }
 
     .smlinks {
         display: flex;
@@ -797,6 +801,12 @@ h3 {
         top: 50%;
         transform: translate(-50%,-50%);
     } */
+
+    footer {
+        background-color: var(--bgsecondaryc);
+        text-align: center;
+        padding: 40px 0 40px 0;
+    }
   
     header {
         padding: 16px 0;
@@ -807,7 +817,7 @@ h3 {
         max-width: 320px;
     }      
 
-    .contact main {
+    .contact {
         height: calc(100vh - 181.66px);
     }
 
@@ -1006,11 +1016,11 @@ h3 {
 
     /* Contact page */ 
 
-    #contactfooter {
+    /* #contactfooter {
         width: 100%;
         position: absolute;
         bottom: 0;
-    }
+    } */
 
 
     /* About me page */
