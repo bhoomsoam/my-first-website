@@ -27,6 +27,8 @@ element,element,.. - div, p - Selects all <div> elements and all <p> elements
     box-sizing: border-box;
 }
 
+html{scroll-behavior:smooth}
+
 :root{
     --primaryc:rgba(0,0,0,1);
     --secondaryc: rgba(77,77,77,1);
@@ -322,42 +324,112 @@ h3 {
 
     .smlinks {
         display: flex;
-        gap: 1.2rem;
+        gap: 2rem;
         justify-content: center;
         align-items: baseline;
     }
 
-    .smlinks svg{
-        width: 2.4rem;
-        height: auto;
+    .smic {
+        width: 7rem;
+        height: auto;  
     }
 
-    .smlinks svg:visited,
+    .smic:visited{
+        fill: var(--primaryc)
+    }
+
+    .smic:hover{
+        fill: var(--tertiaryc)
+    }
+
+    .smic:focus{
+        fill: var(--tertiaryc)
+    }
+
+    .smic:active{
+        fill: var(--primaryc)
+    }
+
+
+
     .icham:visited {
         fill: var(--primaryc)
     }
     
-    .smlinks svg:hover,
     .icham:hover {
-        fill: var(--tertiaryc)
+        background-color: var(--tertiaryc)
     }
-
-    .smlinks svg:focus,
+  
     .icham:focus {
         fill: var(--tertiaryc)
     }
 
-    .smlinks svg:active,
     .icham:active {
         fill: var(--primaryc)
     }
 
-    /* .scrollContainer {
-        height: 0px;
-        overflow: auto;
-        scrollbar-gutter: stable both-edges;
-        flex: 1 1 auto;
-    } */
+
+    .mobile-scn{
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .mobile-scn:hover {opacity: 0.7;}
+
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+    }
+
+    @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+    }
+
+    /* The Close Button */
+    .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
 
 
     /* Index & Misc pages*/  
@@ -665,6 +737,8 @@ h3 {
 
 /* Link and button styling */
 
+
+
     a { /* link styling */
         color: var(--secondaryc);
         text-decoration: none; /* No underlining */
@@ -791,6 +865,8 @@ h3 {
     }
 
 
+
+
 /*=====  End of Links and button styling  ======*/
   
 @media only screen and (min-width: 768px) {
@@ -907,7 +983,7 @@ h3 {
     }
     
     .cvr-img {
-        height: 500px;
+        height: 300px;
     }
 
     .idea-bubbles {
