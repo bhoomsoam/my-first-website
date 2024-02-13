@@ -37,12 +37,8 @@ html{scroll-behavior:smooth}
     --bgprimaryc: rgba(255,255,255,1);
     --bgsecondaryc: rgb(238, 238, 238);
     --accentc: rgba(207,255,15,1);
-    --errorc: rgb(255, 33, 70);
+    --errorc: rgb(214, 0, 36);
 
-    /* --fh1:'Montserrat Alternates', sans-serif;
-    --fh2: 'Trirong', serif;
-    --fh3: 'Nunito Sans', sans-serif;
-    --fbody: 'Nunito Sans', sans-serif; */
 }
 
 body {
@@ -85,11 +81,11 @@ h3 {
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1.1rem; 
-    font-weight: 400;
+    font-weight: 800;
     letter-spacing: 1px;
     line-height: 1;
     text-transform: uppercase;
-    color: var(--secondaryc);
+    color: var(--primaryc);
 }
 
 
@@ -99,16 +95,7 @@ h3 {
 
     /* Common*/
 
-    footer {
-        background-color: var(--bgsecondaryc);
-        text-align: center;
-        padding: 40px 0 40px 0;
-    }
 
-    footer p {
-        margin: 0;
-    }
-    
     section {
         margin: 24px 0;
     }
@@ -281,7 +268,6 @@ h3 {
         font-weight: 800;
         font-style: italic; 
         color: var(--primaryc);
-        /* text-shadow: 2px 2px 0px var(--accentc); */
     }
     
     .column-left-index {
@@ -375,6 +361,7 @@ h3 {
     }
 
     .mobile-scn:hover {opacity: 0.7;}
+    
 
     /* The Modal (background) */
     .modal {
@@ -431,6 +418,25 @@ h3 {
     cursor: pointer;
     }
 
+
+    .contact {
+        /* height: calc(100vh - 181.66px); */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;    
+    }
+
+    footer {
+        margin-top: auto;
+        background-color: var(--bgsecondaryc);
+        text-align: center;
+        padding: 40px 0 40px 0;
+    }
+
+    footer p {
+        margin: 0;
+    }
+    
 
     /* Index & Misc pages*/  
 
@@ -629,7 +635,6 @@ h3 {
   }
 
     #formcarry-container * {
-    /* box-sizing: border-box; */
     padding: 8px 0;
   }
 
@@ -641,7 +646,7 @@ h3 {
   .formcarry-block {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    /* align-items: left; */
   }
 
   #formcarry-container .formcarry-block:not(:first-child) {
@@ -699,15 +704,19 @@ h3 {
   #formcarry-container textarea:focus,
   #formcarry-container select:focus {
     background-color: var(--bgprimaryc);
-    border: 2px solid rgba(var(--tertiaryc));
+    border: 2px solid var(--primaryc);
   }
 
   #formcarry-container input:focus,
   #formcarry-container select:focus {
+    outline: none;
+    border: 2px solid var(--primaryc);
     padding: 8px 11px;
   }
 
   #formcarry-container textarea:focus {
+    outline: none;
+    border: 2px solid var(--primaryc);
     padding: 11px;
   }
 
@@ -725,9 +734,9 @@ h3 {
   #formcarry-container select:focus:required:invalid,
   #formcarry-container select:focus:invalid
   {
-    color: rgba(var(--errorc)); 
-    border-color: rgba(var(--errorc));
-    box-shadow: 0px 1px 6px rgba(var(--errorc), 17%), 0px 2px 0px rgba(var(--errorc), 14%);
+    color: var(--errorc); 
+    border-color: var(--errorc);
+    box-shadow: 6px 6px var(--errorc);
   }
 
 /*=====  End of Fields  ======*/
@@ -817,27 +826,26 @@ h3 {
         color: var(--bgprimaryc);
         font-weight: 600;
         max-width: 220px;
-        transition: 
-            color 0.2s linear, 
-            letter-spacing 0.2s ease-in-out;
+        transition: color 0.2s linear, letter-spacing 0.2s ease-in-out;
+    }
 
-        &:visited {
+    header .button:visited {
             color: var(--bgprimaryc);
             background-color: var(--primaryc);
-        }
+    }
 
-        &:hover {
+    header .button:hover {
             color: var(--bgprimaryc);
             letter-spacing: 0.15em;
-        }
     }
 
     .effect01 {
         overflow: hidden;
         position: relative;
         transition: all 0.3s ease-in-out;
-
-        &::after{
+    }
+     
+    .effect01::after{
             background: var(--bgprimaryc);
             border: 0px solid var(--bgprimaryc);
             content: "";
@@ -851,9 +859,9 @@ h3 {
             width: 50px;
             transition: all 1s cubic-bezier(0.075,0.82, 0.165, 1);
             z-index: 1;
-        }
+    }
     
-        &:hover::after {
+    .effect01:hover::after {
             background-color: var(--primaryc);
             font-size: 20px;
             border: 20px solid var(--bgprimaryc);
@@ -861,11 +869,7 @@ h3 {
             left: 120%;
             -webkit-transform: rotate(40deg);
             transform: rotate(40deg);
-        }
     }
-
-
-
 
 /*=====  End of Links and button styling  ======*/
   
@@ -892,10 +896,6 @@ h3 {
         font-size: 18px;
         max-width: 320px;
     }      
-
-    .contact {
-        height: calc(100vh - 181.66px);
-    }
 
     .skills .row > ul {
         height: 120px;
@@ -1097,6 +1097,7 @@ h3 {
         position: absolute;
         bottom: 0;
     } */
+
 
 
     /* About me page */
