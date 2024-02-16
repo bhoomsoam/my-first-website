@@ -709,13 +709,13 @@ h3 {
 
   #formcarry-container input:focus,
   #formcarry-container select:focus {
-    outline: none;
+    outline-color: var(--tertiaryc);
     border: 2px solid var(--primaryc);
     padding: 8px 11px;
   }
 
   #formcarry-container textarea:focus {
-    outline: none;
+    outline-color: var(--tertiaryc);
     border: 2px solid var(--primaryc);
     padding: 11px;
   }
